@@ -109,3 +109,9 @@ var myArray = [["Dog", 34], ["Bob",  76]];
 var myArray = [50,60,70];
 
 var myData = myArray[0]
+
+// Setup
+var myArray = [18,64,99];
+myArray[0] = 45;
+
+// Only change code below this line
