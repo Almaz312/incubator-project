@@ -1,4 +1,0 @@
-// comment code
-/* code commented
- */
-
