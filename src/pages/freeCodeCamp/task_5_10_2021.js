@@ -102,3 +102,6 @@ var secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change this
 
 // Only change code below this line
 var myArray = ["peanut butter",  9, "jelly", 6, "bread"];
+
+// Only change code below this line
+var myArray = [["Dog", 34], ["Bob",  76]];
