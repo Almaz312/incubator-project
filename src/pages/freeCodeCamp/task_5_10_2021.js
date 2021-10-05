@@ -53,3 +53,9 @@ myStr += "This is the second sentence.";
 // Only change code below this line
 var myName = "freeCodeCamp";
 var myStr = "My name is " + myName + "and I am well!";
+
+// Change code below this line
+
+var someAdjective = "awesome!";
+var myStr = "Learning to code is ";
+myStr += someAdjective;
