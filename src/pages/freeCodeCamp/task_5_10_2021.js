@@ -124,3 +124,35 @@ var myData = myArray[2][1];
 var myArray = [["John", 23], ["cat", 2]];
 myArray.push(["dog", 3])
 // Only change code below this line
+
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line
+var removedFromMyArray = myArray.pop();
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+
+// Only change code below this line
+var removedFromMyArray = myArray.shift();
+
+// Setup
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul",35]);
+
+// Only change code below this line
+
+var myList = [["Bar", 15], ["Bar", 15], ["Bar", 15], ["Bar", 15], ["Bar", 15], ["Bar", 15], ];
+
+function reusableFunction() {
+    console.log("Hi World");
+}
+reusableFunction();
+
+function functionWithArgs(param1, param2) {
+    console.log(param1 + param2);
+}
+functionWithArgs(1,2);
+functionWithArgs(7,9);
