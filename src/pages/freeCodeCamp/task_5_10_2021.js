@@ -36,3 +36,5 @@ c /= 11;
 
 let myFirstName = "Vasya"
 let myLastName = "Alibabaevich"
+
+var myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
