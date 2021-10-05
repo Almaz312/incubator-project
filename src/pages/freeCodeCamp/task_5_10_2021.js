@@ -105,3 +105,7 @@ var myArray = ["peanut butter",  9, "jelly", 6, "bread"];
 
 // Only change code below this line
 var myArray = [["Dog", 34], ["Bob",  76]];
+
+var myArray = [50,60,70];
+
+var myData = myArray[0]
