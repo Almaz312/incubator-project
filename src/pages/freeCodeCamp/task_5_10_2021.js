@@ -81,3 +81,9 @@ var myStr = "Jello World";
 // Only change code below this line
 myStr = "Hello World"; // Change this line
 // Only change code above this line
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line
+var thirdLetterOfLastName = lastName[2]; // Change this line
