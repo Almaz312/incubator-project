@@ -93,3 +93,34 @@ var lastName = "Lovelace";
 
 // Only change code below this line
 var lastLetterOfLastName = lastName[lastName.length - 1]; // Change this line
+
+// Setup
+var lastName = "Lovelace";
+
+// Only change code below this line
+var secondToLastLetterOfLastName = lastName[lastName.length - 2]; // Change this line
+
+// Only change code below this line
+var myArray = ["peanut butter",  9, "jelly", 6, "bread"];
+
+// Only change code below this line
+var myArray = [["Dog", 34], ["Bob",  76]];
+
+var myArray = [50,60,70];
+
+var myData = myArray[0]
+
+// Setup
+var myArray = [18,64,99];
+myArray[0] = 45;
+
+// Only change code below this line
+
+var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
+
+var myData = myArray[2][1];
+
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3])
+// Only change code below this line
