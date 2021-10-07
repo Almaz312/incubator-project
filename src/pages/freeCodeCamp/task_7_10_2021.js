@@ -37,3 +37,94 @@ function orderMyLogic(val) {
 }
 
 orderMyLogic(7);
+
+function testSize(num) {
+    // Only change code below this line
+    if (num < 5) {
+        return "Tiny"
+    } else if (num < 10) {
+        return "Small"
+    } else if (num < 15) {
+        return "Medium"
+    } else if (num < 20) {
+        return "Large"
+    } else if (num >= 20) {
+        return "Huge"
+    }
+    // Only change code above this line
+}
+
+testSize(7);
+
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+function golfScore(par, strokes) {
+    // Only change code below this line
+    if (strokes === 1) {
+        return "Hole-in-one!"
+    } else if (strokes === 2) {
+        return "Eagle"
+    } else if (strokes === 3) {
+        return "Birdie"
+    } else if (par === 4 && strokes === 4) {
+        return "Par"
+    } else if (par ===4 && strokes ===5) {
+        return "Bogey"
+    } else if (par ===4 && strokes ===6) {
+        return "Double Bogey"
+    } else if (par >=4 && strokes >=7) {
+        return "Go Home!"
+    } else if (par ===5 && strokes ===5) {
+        return "Par"
+    }
+
+    // Only change code above this line
+}
+
+golfScore(5, 4);
+
+function caseInSwitch(val) {
+    var answer = "";
+    // Only change code below this line
+    switch(val) {
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma"
+            break;
+        case 4:
+            answer = "delta";
+            break
+    }
+    // Only change code above this line
+    return answer;
+}
+
+caseInSwitch(1);
+
+function switchOfStuff(val) {
+    var answer = "";
+    // Only change code below this line
+    switch (val) {
+        case 'a':
+            answer = "apple";
+            break;
+        case 'b':
+            answer = "bird";
+            break;
+        case 'c':
+            answer = "cat";
+            break;
+        default:
+            answer = "stuff";
+    }
+
+
+    // Only change code above this line
+    return answer;
+}
+
+switchOfStuff(1);
