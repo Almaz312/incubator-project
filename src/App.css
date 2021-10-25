@@ -1,8 +1,10 @@
-.App {
-  text-decoration-style: dotted;
-  font-size: 18px;
-  color: red;
-  font-weight: normal;
-  line-height: 40px;
+.app-wrapper {
+    width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+            "h h"
+            "n c";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
 }
-
