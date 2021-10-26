@@ -10,8 +10,8 @@ export function MyPosts() {
                     <button>Add posts</button>
                 </div>
             </div>
-            <Post  countsLike="like 32" massage="Hi, how are you?" />
-            <Post  countsLike="like 12" massage="It's my first post" />
+            <Post  countsLike="32" massage="Hi, how are you?" />
+            <Post  countsLike="12" massage="It's my first post" />
         </div>
     );
 };

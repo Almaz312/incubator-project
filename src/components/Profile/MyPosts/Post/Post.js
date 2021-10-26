@@ -9,7 +9,7 @@ export function Post(props) {
             </img>
             {props.massage}
             <div>
-                <span>{props.countsLike}</span>
+                <span>Like</span> {props.countsLike}
             </div>
         </div>
     );

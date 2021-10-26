@@ -1,6 +1,6 @@
 import React from "react";
-import './Profile/Profile.css'
-import {MyPosts} from "./Profile/MyPosts/MyPosts";
+import './Profile.css'
+import {MyPosts} from "./MyPosts/MyPosts";
 
 export function Profile() {
     return (
