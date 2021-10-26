@@ -3,5 +3,12 @@
     background: gold;
 }
 .item {
+    padding: 10px;
+    margin: 20px;
+}
+.item a {
     color: white;
+}
+.item a.active {
+    color: red;
 }
