@@ -8,6 +8,8 @@ export function MyPosts() {
         {id: 2, massage: "It's my first post", likesCount: "23"},
     ]
 
+    const postsElements = postData.map(p => <Post massage={p.massage} countsLike={p.likesCount} id={p.id}/>)
+
     return (
         <div className="myPosts">
             <div>
@@ -22,8 +24,7 @@ export function MyPosts() {
                 </div>
             </div>
             <div className="posts">
-                <Post massage={postData[0].massage} countsLike={postData[0].likesCount}/>
-                <Post massage={postData[1].massage} countsLike={postData[1].likesCount}/>
+                {postsElements}
             </div>
         </div>
     );

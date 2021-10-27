@@ -21,7 +21,7 @@ const dialogsData = [
     {id: 1, name: "Dimych"},
     {id: 2, name: "Esen"},
     {id: 3, name: "Aman"},
-    {id: 4, name: "Arstan"},
+    {id: 4, name: "Asan"},
     {id: 5, name: "Bob"},
     {id: 6, name: "Darya"},
 ];
@@ -34,24 +34,18 @@ const massageData = [
     {id: 5, massage: "and"},
     {id: 6, massage: "Me"},
 ]
+
+const dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)
+const massagesElements = massageData.map(massage => <Massage massage={massage.massage} id={massage.id}/>)
+
 export function Dialogs() {
     return (
         <div className="dialogs">
             <div className="dialogs-item">
-                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id}/>
-                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id}/>
-                <DialogItem name="Aman" id="3"/>
-                <DialogItem name="Arstan" id="4"/>
-                <DialogItem name="Bakyt" id="5"/>
-                <DialogItem name="Bob" id="6"/>
+                {dialogsElements}
             </div>
             <div className="massages">
-              <Massage massage={massageData[0].massage} id={massageData[0].id}/>
-              <Massage massage={massageData[1].massage} id={massageData[1].id}/>
-              <Massage massage={massageData[2].massage} id={massageData[2].id}/>
-              <Massage massage={massageData[3].massage} id={massageData[3].id}/>
-              <Massage massage={massageData[4].massage} id={massageData[4].id}/>
-              <Massage massage={massageData[5].massage} id={massageData[5].id}/>
+                {massagesElements}
             </div>
         </div>
     );
