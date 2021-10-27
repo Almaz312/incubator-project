@@ -1,0 +1,16 @@
+.myPosts {
+    padding: 10px;
+}
+.posts {
+    margin-top: 10px;
+}
+.btnBlock {
+    padding: 10px 0;
+}
+.btnAdd {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid 1px dodgerblue;
+    background: dodgerblue;
+    color: white;
+}
