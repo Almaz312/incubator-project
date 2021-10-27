@@ -2,10 +2,16 @@ import {Post} from "./Post/Post";
 import './MyPosts.css'
 
 export function MyPosts() {
+
+    const postData = [
+        {id: 1, massage: "Hi, how are you?", likesCount: "12"},
+        {id: 2, massage: "It's my first post", likesCount: "23"},
+    ]
+
     return (
         <div className="myPosts">
             <div>
-                <h3> My Posts</h3>
+                <h3>My Posts</h3>
                 <div>
                     <div>
                         <textarea></textarea>
@@ -16,8 +22,8 @@ export function MyPosts() {
                 </div>
             </div>
             <div className="posts">
-                <Post countsLike="32" massage="Hi, how are you?"/>
-                <Post countsLike="12" massage="It's my first post"/>
+                <Post massage={postData[0].massage} countsLike={postData[0].likesCount}/>
+                <Post massage={postData[1].massage} countsLike={postData[1].likesCount}/>
             </div>
         </div>
     );
