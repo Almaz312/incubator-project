@@ -2,9 +2,7 @@ import {Post} from "./Post/Post";
 import './MyPosts.css'
 
 export function MyPosts(props) {
-
     const postsElements = props.posts.map(p => <Post massage={p.massage} countsLike={p.likesCount} id={p.id}/>)
-
     return (
         <div className="myPosts">
             <div>
