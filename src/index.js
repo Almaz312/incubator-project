@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const posts = [
+    {id: 1, massage: "Hi, how are you?", likesCount: "12"},
+    {id: 2, massage: "It's my first post", likesCount: "23"},
+    {id: 2, massage: "It's my post", likesCount: "12"},
+    {id: 2, massage: "It's my first post", likesCount: "34"},
+]
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App posts={posts} />
   </React.StrictMode>,
   document.getElementById('root')
 );

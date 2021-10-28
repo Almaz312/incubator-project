@@ -1,14 +1,9 @@
 import {Post} from "./Post/Post";
 import './MyPosts.css'
 
-export function MyPosts() {
+export function MyPosts(props) {
 
-    const postData = [
-        {id: 1, massage: "Hi, how are you?", likesCount: "12"},
-        {id: 2, massage: "It's my first post", likesCount: "23"},
-    ]
-
-    const postsElements = postData.map(p => <Post massage={p.massage} countsLike={p.likesCount} id={p.id}/>)
+    const postsElements = props.posts.map(p => <Post massage={p.massage} countsLike={p.likesCount} id={p.id}/>)
 
     return (
         <div className="myPosts">

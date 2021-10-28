@@ -10,7 +10,7 @@ import {Music} from "./components/Music/Music";
 import {News} from "./components/News/News";
 import {Settings} from "./components/Settings/Settings";
 
-const App = () => {
+const App = (props) => {
     return (
         <BrowserRouter>
             <div className="app-wrapper">
@@ -18,7 +18,7 @@ const App = () => {
                 <NavBar/>
                 <div className="app-wrapper-content">
                     <Route path='/dialogs' render={() => <Dialogs/>}/>
-                    <Route path='/profile' render={() => <Profile/>}/>
+                    <Route path='/profile' render={() => <Profile posts={props.posts}/>}/>
                     <Route path='/music' render={() => <Music/>}/>
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
