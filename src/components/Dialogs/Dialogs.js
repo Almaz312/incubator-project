@@ -1,4 +1,5 @@
 import React from "react";
+import './Dialogs.css'
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Massage} from "./Massage/Massage";
 
@@ -19,7 +20,6 @@ const massageData = [
     {id: 5, massage: "and"},
     {id: 6, massage: "Me"},
 ]
-
 const dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)
 const massagesElements = massageData.map(massage => <Massage massage={massage.massage} id={massage.id}/>)
 
