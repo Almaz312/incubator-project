@@ -7,8 +7,9 @@ export function MyPosts(props) {
     const postsElements = props.posts.map(p => <Post massage={p.massage} countsLike={p.likesCount} id={p.id}/>)
     const newPostElement = React.createRef()
     const addPost = () => {
+        debugger;
         const text = newPostElement.current.value;
-        alert(text)
+        props.addPost(text);
     };
 
     return (
