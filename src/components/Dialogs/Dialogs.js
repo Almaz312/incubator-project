@@ -23,6 +23,13 @@ const massageData = [
 const dialogsElements = dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)
 const massagesElements = massageData.map(massage => <Massage massage={massage.massage} id={massage.id}/>)
 
+const newPostElement = React.createRef();
+
+const addPost = () => {
+    const text = newPostElement.current.value;
+    alert(text)
+}
+
 export function Dialogs() {
     return (
         <div className="dialogs">
@@ -31,6 +38,12 @@ export function Dialogs() {
             </div>
             <div className="massages">
                 {massagesElements}
+            </div>
+            <div>
+                <textarea ref={newPostElement}></textarea>
+            </div>
+            <div>
+                <button onClick={addPost}>addPost</button>
             </div>
         </div>
     );
