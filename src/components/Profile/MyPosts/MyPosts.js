@@ -1,5 +1,9 @@
 import {Post} from "./Post/Post";
 import './MyPosts.css'
+
+export function MyPosts(props) {
+    const postsElements = props.posts.map(p => <Post massage={p.massage} countsLike={p.likesCount} id={p.id}/>)
+
 import {findAllInRenderedTree} from "react-dom/test-utils";
 import React from "react";
 
@@ -24,7 +28,7 @@ export function MyPosts() {
             <div>
                 <h3>My Posts</h3>
                 <div>
-                    <div>
+                    <div className="btnBlock">
                         <textarea ref={newPostElement}></textarea>
                     </div>
                     <div className="btnBlock">
