@@ -1,6 +1,7 @@
 import {Post} from "./Post/Post";
 import './MyPosts.css'
 import React from "react";
+import {updateNewPostText} from "../../../Redux/State";
 
 
 export function MyPosts(props) {
@@ -12,12 +13,12 @@ export function MyPosts(props) {
         debugger;
         const text = newPostElement.current.value;
         props.addPost(text);
-        newPostElement.current.value = '';
     };
 
     const onPostChange = () => {
-
-    }
+        const text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    };
 
     return (
         <div className="myPosts">
