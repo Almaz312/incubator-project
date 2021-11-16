@@ -21,7 +21,7 @@ const addPost = () => {
                 {massagesElements}
             </div>
             <div>
-                <textarea ref={newPostElement}></textarea>
+                <textarea ref={newPostElement} />
             </div>
             <div>
                 <button onClick={addPost}>addPost</button>
