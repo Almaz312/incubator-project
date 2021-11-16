@@ -19,7 +19,7 @@ export function MyPosts(props) {
                 <h3>My Posts</h3>
                 <div>
                     <div className="btnBlock">
-                        <textarea ref={newPostElement}></textarea>
+                        <textarea ref={newPostElement} />
                     </div>
                     <div className="btnBlock">
                         <button className="btnAdd" onClick={addPost}>Add posts</button>
