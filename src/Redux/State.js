@@ -34,11 +34,17 @@ export const addPost = (postMassage) => {
     debugger;
     let newPost = {
         id: 5,
-        massage: postMassage,
+        massage: State.profilePage.newPostText,
         likeCount: 0
     };
     State.profilePage.posts.push(newPost)
+    State.profilePage.newPostText = '';
     rerenderEntireTree(State)
+};
+
+export const updateNewPostText = (newText) => {
+    State.profilePage.newPostText = newText;
+    rerenderEntireTree(State);
 };
 
 export default State;
