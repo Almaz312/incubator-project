@@ -7,7 +7,8 @@ const State = {
             {id: 2, massage: "It's my first post", likesCount: "23"},
             {id: 2, massage: "It's my post", likesCount: "12"},
             {id: 2, massage: "It's my first post", likesCount: "34"},
-        ]
+        ],
+        newPostText: "it-kamasutra.com"
     },
     dialogPage: {
         dialogs: [
@@ -29,7 +30,7 @@ const State = {
     }
 }
 
-export let addPost = (postMassage) => {
+export const addPost = (postMassage) => {
     debugger;
     let newPost = {
         id: 5,
