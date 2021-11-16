@@ -10,6 +10,7 @@ export function MyPosts(props) {
         debugger;
         const text = newPostElement.current.value;
         props.addPost(text);
+        newPostElement.current.value = '';
     };
 
     return (
