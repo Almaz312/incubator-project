@@ -15,7 +15,7 @@ export const rerenderEntireTree = () => {
     );
 }
 
-rerenderEntireTree(State);
+rerenderEntireTree();
 
 subscribe(rerenderEntireTree);
 
