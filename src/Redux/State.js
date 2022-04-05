@@ -32,7 +32,6 @@ const State = {
 }
 
 export const addPost = (postMassage) => {
-    debugger;
     let newPost = {
         id: 5,
         massage: State.profilePage.newPostText,
@@ -47,5 +46,9 @@ export const updateNewPostText = (newText) => {
     State.profilePage.newPostText = newText;
     rerenderEntireTree(State);
 };
+
+export const subscribe = (observer) => {
+
+}
 
 export default State;
