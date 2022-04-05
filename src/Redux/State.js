@@ -1,54 +1,62 @@
-let rerenderEntireTree = () => {
-    console.log('state changed')
-}
-let State = {
-    profilePage: {
-        posts: [
-            {id: 1, massage: "Hi, how are you?", likesCount: "12"},
-            {id: 2, massage: "It's my first post", likesCount: "23"},
-            {id: 2, massage: "It's my post", likesCount: "12"},
-            {id: 2, massage: "It's my first post", likesCount: "34"},
-        ],
-        newPostText: "it-kamasutra.com"
+let store = {
+    _state: {
+        profilePage: {
+            posts: [
+                {id: 1, massage: "Hi, how are you?", likesCount: "12"},
+                {id: 2, massage: "It's my first post", likesCount: "23"},
+                {id: 2, massage: "It's my post", likesCount: "12"},
+                {id: 2, massage: "It's my first post", likesCount: "34"},
+            ],
+            newPostText: "it-kamasutra.com"
+        },
+        dialogPage: {
+            dialogs: [
+                {id: 1, name: "Dimych"},
+                {id: 2, name: "Esen"},
+                {id: 3, name: "Aman"},
+                {id: 4, name: "Asan"},
+                {id: 5, name: "Bob"},
+                {id: 6, name: "Darya"},
+            ],
+            massages: [
+                {id: 1, massage: "Hi"},
+                {id: 2, massage: "How are you"},
+                {id: 3, massage: "Fine"},
+                {id: 4, massage: "You"},
+                {id: 5, massage: "and"},
+                {id: 6, massage: "Me"},
+            ]
+        }
     },
-    dialogPage: {
-        dialogs: [
-            {id: 1, name: "Dimych"},
-            {id: 2, name: "Esen"},
-            {id: 3, name: "Aman"},
-            {id: 4, name: "Asan"},
-            {id: 5, name: "Bob"},
-            {id: 6, name: "Darya"},
-        ],
-        massages: [
-            {id: 1, massage: "Hi"},
-            {id: 2, massage: "How are you"},
-            {id: 3, massage: "Fine"},
-            {id: 4, massage: "You"},
-            {id: 5, massage: "and"},
-            {id: 6, massage: "Me"},
-        ]
+    getState() {
+        return this._state
+    },
+
+    rerenderEntireTree() {
+        console.log('state changed')
+    },
+
+    addPost() {
+        let newPost = {
+            id: 5,
+            massage: this._state.profilePage.newPostText,
+            likeCount: 0
+        };
+        this._state.profilePage.posts.push(newPost)
+        this._state.profilePage.newPostText = '';
+        this.rerenderEntireTree(this._state)
+    },
+
+    updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText;
+        this.rerenderEntireTree(this._state);
+    },
+
+    subscribe(observer) {
+        this.rerenderEntireTree = observer;
     }
-};
 
-export const addPost = () => {
-    let newPost = {
-        id: 5,
-        massage: State.profilePage.newPostText,
-        likeCount: 0
-    };
-    State.profilePage.posts.push(newPost)
-    State.profilePage.newPostText = '';
-    rerenderEntireTree()
-};
+}
 
-export const updateNewPostText = (newText) => {
-    State.profilePage.newPostText = newText;
-    rerenderEntireTree();
-};
-
-export const subscribe = (observer) => {
-    rerenderEntireTree = observer;
-};
-
-export default State;
+export default store;
+window.store = store;
