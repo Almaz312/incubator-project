@@ -1,5 +1,6 @@
-import {rerenderEntireTree} from "../render";
-
+let rerenderEntireTree = () => {
+    console.log('state changed')
+}
 const State = {
     profilePage: {
         posts: [
