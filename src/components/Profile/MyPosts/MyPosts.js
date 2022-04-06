@@ -1,7 +1,6 @@
 import {Post} from "./Post/Post";
 import './MyPosts.css'
 import React from "react";
-import {updateNewPostText} from "../../../Redux/State";
 
 
 export function MyPosts(props) {
