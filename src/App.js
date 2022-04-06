@@ -9,7 +9,6 @@ import {Dialogs} from "./components/Dialogs/Dialogs";
 import {Music} from "./components/Music/Music";
 import {News} from "./components/News/News";
 import {Settings} from "./components/Settings/Settings";
-import {updateNewPostText} from "./Redux/State";
 
 const App = (props) => {
     return (
@@ -22,8 +21,7 @@ const App = (props) => {
                     <Route path='/profile'
                            render={() => <Profile
                                profilePage={props.state.profilePage}
-                               addPost={props.addPost}
-                               updateNewPostText={props.updateNewPostText}
+                               dispatch={props.dispatch}
                            />}/>
                     <Route path='/music' render={() => <Music/>}/>
                     <Route path='/news' render={() => <News/>}/>
