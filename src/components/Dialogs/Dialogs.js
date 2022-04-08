@@ -2,11 +2,9 @@ import React from "react";
 import './Dialogs.css'
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Massage} from "./Massage/Massage";
-import {sendMassageCreator, updateNewMassageBodyCreator} from "../../Redux/dialogs-reducer";
 
 export function Dialogs(props) {
-
-    let state = props.store.getState().dialogPage;
+    let state = props.dialogPage;
 
     const dialogsElements = state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)
     const massagesElements = state.massages.map(massage => <Massage massage={massage.massage} id={massage.id}/>)
@@ -14,10 +12,10 @@ export function Dialogs(props) {
 
     let onNewMessageChange = (e) => {
         let body = e.target.value;
-        props.store.dispatch(updateNewMassageBodyCreator(body));
+        props.updateNewMassageBody(body)
     }
     let onSendMessageClick = () => {
-        props.store.dispatch(sendMassageCreator());
+        props.sendMassage();
     }
     return (
         <div className="dialogs">
