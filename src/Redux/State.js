@@ -1,12 +1,6 @@
 import {profileReducer} from "./profile-reducer";
 import {dialogsReducer} from "./dialogs-reducer";
 
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
-const UPDATE_NEW_MASSAGE_BODY = 'UPDATE_NEW_MASSAGE_BODY';
-const SEND_MASSAGE = 'SEND_MASSAGE';
-
 let store = {
     _state: {
         profilePage: {
@@ -56,12 +50,6 @@ let store = {
         this.rerenderEntireTree(this._state);
     },
 };
-
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
-
-export const sendMassageCreator = () => ({type: SEND_MASSAGE})
-export const updateNewMassageBodyCreator = (body) => ({type: UPDATE_NEW_MASSAGE_BODY, body: body});
 
 export default store;
 window.store = store;
