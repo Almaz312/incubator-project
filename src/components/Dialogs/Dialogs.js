@@ -2,7 +2,7 @@ import React from "react";
 import './Dialogs.css'
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Massage} from "./Massage/Massage";
-import {sendMassageCreator, updateNewMassageBodyCreator} from "../../Redux/State";
+import {sendMassageCreator, updateNewMassageBodyCreator} from "../../Redux/dialogs-reducer";
 
 export function Dialogs(props) {
 

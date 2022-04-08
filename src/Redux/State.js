@@ -1,8 +1,5 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
-const UPDATE_NEW_MASSAGE_BODY = 'UPDATE_NEW_MASSAGE_BODY';
-const SEND_MASSAGE = 'SEND_MASSAGE';
+import {profileReducer} from "./profile-reducer";
+import {dialogsReducer} from "./dialogs-reducer";
 
 let store = {
     _state: {
@@ -48,36 +45,11 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                massage: this._state.profilePage.newPostText,
-                likeCount: 0
-            };
-            this._state.profilePage.posts.push(newPost)
-            this._state.profilePage.newPostText = '';
-            this.rerenderEntireTree(this._state)
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profilePage.newPostText = action.newText;
-            this.rerenderEntireTree(this._state);
-        } else if (action.type === UPDATE_NEW_MASSAGE_BODY) {
-            this._state.dialogPage.newMassageBody = action.body;
-            this.rerenderEntireTree(this._state);
-        } else if (action.type === SEND_MASSAGE) {
-            let body = this._state.dialogPage.newMassageBody;
-            this._state.dialogPage.newMassageBody = '';
-            this._state.dialogPage.massages.push({id: 7, massage: body});
-            this.rerenderEntireTree(this._state);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogPage = dialogsReducer(this._state.dialogPage, action);
+        this.rerenderEntireTree(this._state);
     },
-
 };
-
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text});
-
-export const sendMassageCreator = () => ({type: SEND_MASSAGE})
-export const updateNewMassageBodyCreator = (body) => ({type: UPDATE_NEW_MASSAGE_BODY, body: body});
 
 export default store;
 window.store = store;
