@@ -2,16 +2,23 @@ import React from "react";
 import './Dialogs.css'
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Massage} from "./Massage/Massage";
+import {sendMassageCreator, updateNewMassageBodyCreator} from "../../Redux/State";
 
 export function Dialogs(props) {
-    const dialogsElements = props.state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)
-    const massagesElements = props.state.massages.map(massage => <Massage massage={massage.massage} id={massage.id}/>)
-const newPostElement = React.createRef();
 
-const addPost = () => {
-    const text = newPostElement.current.value;
-    alert(text)
-}
+    let state = props.store.getState().dialogPage;
+
+    const dialogsElements = state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>)
+    const massagesElements = state.massages.map(massage => <Massage massage={massage.massage} id={massage.id}/>)
+    const newMessageBody = state.newMassageBody;
+
+    let onNewMessageChange = (e) => {
+        let body = e.target.value;
+        props.store.dispatch(updateNewMassageBodyCreator(body));
+    }
+    let onSendMessageClick = () => {
+        props.store.dispatch(sendMassageCreator());
+    }
     return (
         <div className="dialogs">
             <div className="dialogs-item">
@@ -21,10 +28,13 @@ const addPost = () => {
                 {massagesElements}
             </div>
             <div>
-                <textarea ref={newPostElement} />
+                <textarea value={newMessageBody}
+                          onChange={onNewMessageChange}
+                          placeholder={'Enter your message'}
+                />
             </div>
             <div>
-                <button onClick={addPost}>addPost</button>
+                <button onClick={onSendMessageClick}>Send</button>
             </div>
         </div>
     );
