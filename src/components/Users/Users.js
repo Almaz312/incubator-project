@@ -1,7 +1,7 @@
 import React from "react";
 import './Users.css'
 import axios from "axios";
-import userPhoto from '/src/assets/Images/user.png'
+import userPhoto from '../../assets/Images/user.png'
 
 export const Users = (props) => {
     if (props.users.length === 0) {
@@ -10,6 +10,7 @@ export const Users = (props) => {
             props.setUsers(response.data.items)
         })
     }
+    console.log(props.users)
     return <div>
         {
             props.users.map(u => <div key={u.id}>
