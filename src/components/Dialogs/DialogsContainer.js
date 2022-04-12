@@ -11,10 +11,10 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateNewMassageBody: () => {
+        sendMassage: () => {
             dispatch(sendMassageCreator())
         },
-        sendMassage: (body) => {
+        updateNewMassageBody: (body) => {
             dispatch(updateNewMassageBodyCreator(body));
         }
     }
