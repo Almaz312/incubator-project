@@ -12,6 +12,9 @@ export function NavBar() {
                 <NavLink to='/dialogs' activeClassName="active">Massage</NavLink>
             </div>
             <div className="item">
+                <NavLink to='/users' activeClassName="active">Users</NavLink>
+            </div>
+            <div className="item">
                 <NavLink to='/music' activeClassName="active">Music</NavLink>
             </div>
             <div className="item">
