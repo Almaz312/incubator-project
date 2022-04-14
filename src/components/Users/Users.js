@@ -12,6 +12,13 @@ export class Users extends React.Component {
 
     render() {
         return <div>
+            <div>
+                <span className="selectedPage">1</span>
+                <span className="selectedPage">2</span>
+                <span className="selectedPage">3</span>
+                <span className="selectedPage">4</span>
+                <span className="selectedPage">5</span>
+            </div>
             {this.props.users.map(u => <div key={u.id}>
                 <div>
                     <img src={u.photos.small != null ? u.photos.small : userPhoto} className="userImg"/>
